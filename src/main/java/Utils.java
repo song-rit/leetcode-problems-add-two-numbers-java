@@ -25,6 +25,18 @@ public class Utils {
         }
     }
 
+    public static void displayListNodeByTopic(String topic, ListNode list) {
+        System.out.print(topic + ":");
+        while (list != null) {
+            if (list.next != null) {
+                System.out.print(list.val + ",");
+            } else {
+                System.out.println(list.val);
+            }
+            list = list.next;
+        }
+    }
+
     public static boolean isListNodeAllElementEqual(ListNode l1, ListNode l2) {
 
         while (l1 != null && l2 != null) {
